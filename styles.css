@@ -2188,13 +2188,31 @@ img {
     }
 }
 
-.preloader-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: var(--primary);
+.preloader-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     animation: textFadePulse 1.2s ease-in-out infinite alternate;
+}
+
+.preloader-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.preloader-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary);
+    letter-spacing: 2.5px;
+    margin-top: 6px;
+    line-height: 1;
 }
 
 @keyframes textFadePulse {
