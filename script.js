@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>
             <div class="side-particle icon-primary" style="top: 15%;"><i class="fa-solid fa-plus"></i></div>
             <div class="side-particle bubble-secondary side-bubble" style="top: 40%;"></div>
-            <div class="side-particle icon-secondary" style="top: 65%;"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="side-particle icon-secondary" style="top: 80%;"><i class="fa-solid fa-ear-listen" style="font-size: 1.9rem;"></i></div>
             <div class="side-particle bubble-primary side-bubble" style="top: 85%;"></div>
         `;
         const rightWave = document.createElement('div');
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <svg viewBox="0 0 100 1000" preserveAspectRatio="none">
                 <path class="wave-path-right" d="M50,0 L50,180 Q60,190 50,200 L50,250 L25,255 L80,265 L50,270 Q40,280 50,290 L50,480 Q60,490 50,500 L50,550 L25,555 L80,565 L50,570 Q40,580 50,590 L50,780 Q60,790 50,800 L50,850 L25,855 L80,865 L50,870 Q40,880 50,890 L50,1000" />
             </svg>
-            <div class="side-particle icon-secondary" style="top: 20%;"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="side-particle icon-secondary" style="top: 20%;"><i class="fa-solid fa-ear-listen" style="font-size: 1.9rem;"></i></div>
             <div class="side-particle bubble-primary side-bubble" style="top: 45%;"></div>
-            <div class="side-particle icon-primary" style="top: 70%;"><i class="fa-solid fa-plus"></i></div>
+            <div class="side-particle icon-primary" style="top: 30%;"><i class="fa-solid fa-plus"></i></div>
             <div class="side-particle bubble-secondary side-bubble" style="top: 90%;"></div>
         `;
         document.body.appendChild(leftWave);
@@ -53,101 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Dynamic injection of the video reviews section and playing modal
-    const injectVideoSection = () => {
-        const footer = document.querySelector('footer');
-        if (!footer) return;
-
-        // A. Create Video Reviews Section
-        const videoSection = document.createElement('section');
-        videoSection.className = 'video-reviews-section py-section';
-        videoSection.innerHTML = `
-            <div class="container">
-                <div class="section-header text-center reveal-on-scroll" style="position: relative;">
-                    <span class="section-subtitle text-center">Patient Success Stories</span>
-                    <h2 class="section-title text-center">Video Testimonials</h2>
-                    <p class="section-desc text-center">Hear from our patients who recovered their hearing clarity and speech voice at Vatsalya Clinic.</p>
-                </div>
-                
-                <div class="video-reviews-grid">
-                    <div class="video-card-item reveal-on-scroll" data-video-id="TQPXc-zu5-E">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/TQPXc-zu5-E/sddefault.jpg" alt="Patient Video 1">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Successful Patient Journey</h3>
-                            <p>Watch this patient's feedback on their successful hearing aid fitting.</p>
-                        </div>
-                    </div>
-                    <div class="video-card-item reveal-on-scroll" data-video-id="gy-PYBIB9Po">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/gy-PYBIB9Po/sddefault.jpg" alt="Patient Video 2">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Speech Clarity Progress</h3>
-                            <p>Hear from this patient about their speech assessment and therapy feedback.</p>
-                        </div>
-                    </div>
-                    <div class="video-card-item reveal-on-scroll" data-video-id="Zl4gu2Xq6SI">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/Zl4gu2Xq6SI/sddefault.jpg" alt="Patient Video 3">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Audiological Support Story</h3>
-                            <p>Review of traditional audiological diagnosis and speech care results.</p>
-                        </div>
-                    </div>
-                    <div class="video-card-item reveal-on-scroll" data-video-id="pFzwSiNoNq0">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/pFzwSiNoNq0/sddefault.jpg" alt="Patient Video 4">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Hearing Aid Fitting Success</h3>
-                            <p>Detailed patient experience of digital hearing aids trial and fitting.</p>
-                        </div>
-                    </div>
-                    <div class="video-card-item reveal-on-scroll" data-video-id="17FQNOh8MIE">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/17FQNOh8MIE/sddefault.jpg" alt="Patient Video 5">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Pediatric Audiology Feedback</h3>
-                            <p>Parents' review on pediatric speech therapy and hearing testing.</p>
-                        </div>
-                    </div>
-                    <div class="video-card-item reveal-on-scroll" data-video-id="sI3ZWaM5dAM">
-                        <div class="video-card-thumb">
-                            <img src="https://img.youtube.com/vi/sI3ZWaM5dAM/sddefault.jpg" alt="Patient Video 6">
-                            <div class="video-card-play"><i class="fa-solid fa-play"></i></div>
-                        </div>
-                        <div class="video-card-info">
-                            <h3>Cochlear Implant Success</h3>
-                            <p>Patient recovery journey after premium cochlear implant rehabilitation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        footer.parentNode.insertBefore(videoSection, footer);
-
-        // B. Set Click Listeners to Open Videos in a New Tab to bypass YouTube domain restriction errors (Error 153)
-        const videoCards = videoSection.querySelectorAll('.video-card-item');
-        videoCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const videoId = card.getAttribute('data-video-id');
-                if (videoId) {
-                    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-                }
-            });
-        });
-
-        // E. Replace placeholder videos in the footer with clinical trust text
+    // Replace placeholder videos in the footer with clinical trust text
+    const cleanFooterVideos = () => {
         const footerTitles = document.querySelectorAll('.footer-title');
         footerTitles.forEach(title => {
             if (title.textContent.trim() === 'Satisfied Patient Videos') {
@@ -160,13 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     textP.style.marginTop = '0';
                     textP.style.fontSize = '0.92rem';
                     textP.textContent = 'Providing professional clinical hearing aids trial, fitting, voice therapy, and pediatric testing services since 2003. Reach out to coordinate an appointment today.';
-                    
+
                     const bookBtn = document.createElement('a');
                     bookBtn.href = 'contact.html';
                     bookBtn.className = 'btn btn-secondary btn-sm';
                     bookBtn.style.marginTop = '12px';
                     bookBtn.textContent = 'Book Slot';
-                    
+
                     videoGrid.replaceWith(textP);
                     footerCol.appendChild(bookBtn);
                 }
@@ -175,14 +82,84 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     injectWaveforms();
-    injectVideoSection();
+    cleanFooterVideos();
+
+    // ==========================================
+    // VIDEO TESTIMONIALS — Master-Detail Gallery Logic
+    // ==========================================
+    const initVideoTestimonials = () => {
+        const vtSection = document.getElementById('video-testimonials');
+        if (!vtSection) return;
+
+        const masterVideo = document.getElementById('vtMasterVideo');
+        const masterTag = document.getElementById('vtMasterTag');
+        const vtCards = vtSection.querySelectorAll('.vt-card');
+
+        if (!masterVideo || !vtCards.length) return;
+
+        /**
+         * Loads a thumbnail's video into the master player.
+         * @param {HTMLElement} card - the .vt-card element clicked
+         */
+        const playInMaster = (card) => {
+            const videoSrc = card.dataset.videoSrc;
+            const title = card.dataset.title;
+            const tag = card.dataset.tag;
+
+            if (!videoSrc) return;
+
+            // Remove active state from all cards
+            vtCards.forEach(c => c.classList.remove('active-thumb'));
+            // Add active state to clicked card
+            card.classList.add('active-thumb');
+
+            // Update Master Info
+            if (masterTag) masterTag.textContent = tag || 'Vatsalya Care';
+
+            // Swap Video Source and Play
+            masterVideo.src = videoSrc;
+            masterVideo.play().catch(e => console.log('Autoplay blocked by browser:', e));
+        };
+
+        // Add click listeners to all thumbnails
+        vtCards.forEach(card => {
+            const wrap = card.querySelector('.vt-thumb-wrap');
+            if (wrap) {
+                wrap.addEventListener('click', () => {
+                    // Start playing with sound when explicitly clicked
+                    masterVideo.muted = false;
+                    playInMaster(card);
+                });
+            }
+        });
+
+        // Auto-play master video on scroll (muted)
+        let autoPlayed = false;
+        const autoPlayObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !autoPlayed) {
+                    autoPlayed = true;
+                    autoPlayObserver.disconnect();
+                    // Just play the default master video
+                    setTimeout(() => {
+                        masterVideo.muted = true;
+                        masterVideo.play().catch(e => console.log('Autoplay blocked:', e));
+                    }, 600);
+                }
+            });
+        }, { threshold: 0.35 });
+
+        autoPlayObserver.observe(vtSection);
+    };
+
+    initVideoTestimonials();
 
     // ==========================================
     // 1. Mobile Menu Toggle
     // ==========================================
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('open');
@@ -218,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href');
-        
+
         // Highlight active page based on file name matching
         if (currentFile === href) {
             link.classList.add('active');
@@ -438,9 +415,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // A. Scroll Reveal using ScrollTrigger (filtering out cards inside staggered grids to avoid conflicts)
         const revealElements = Array.from(document.querySelectorAll('.reveal-on-scroll'))
             .filter(el => !el.closest('.services-grid, .products-grid, .blogs-grid, .stats-card-grid, .features-custom-grid, .video-reviews-grid'));
-            
+
         revealElements.forEach(el => {
-            gsap.fromTo(el, 
+            gsap.fromTo(el,
                 { opacity: 0, y: 50 },
                 {
                     opacity: 1,
@@ -463,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (grid) {
                 const cards = grid.querySelectorAll(':scope > *');
                 if (cards.length > 0) {
-                    gsap.fromTo(cards, 
+                    gsap.fromTo(cards,
                         { opacity: 0, y: 40 },
                         {
                             opacity: 1,
@@ -501,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hoverCards.forEach(card => {
             card.style.position = 'relative';
             card.style.overflow = 'hidden';
-            
+
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left - rect.width / 2;
@@ -570,20 +547,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tl = gsap.timeline({
                     onComplete: () => {
                         preloader.style.display = 'none';
+                        // Remove gsap-active so CSS safety fallbacks take over
+                        document.body.classList.remove('gsap-active');
                         ScrollTrigger.refresh();
                     }
                 });
-                
+
                 tl.to(preloader, {
                     opacity: 0,
                     yPercent: -100,
                     duration: 0.75,
                     ease: 'power3.inOut'
                 })
-                .from('.header', { y: -80, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.35')
-                .from('.hero-content > *', { opacity: 0, y: 40, duration: 0.7, stagger: 0.12, ease: 'power3.out' }, '-=0.35')
-                .from('.hero-image-wrapper', { opacity: 0, scale: 0.88, x: 50, duration: 0.9, ease: 'power3.out' }, '-=0.5')
-                .from('.floating-badge', { opacity: 0, scale: 0.6, duration: 0.5, stagger: 0.15, ease: 'back.out(1.6)' }, '-=0.5');
+                    .fromTo('.header',
+                        { y: -80, opacity: 0 },
+                        { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', clearProps: 'all' },
+                        '-=0.35')
+                    .fromTo('.hero-content > *',
+                        { opacity: 0, y: 40 },
+                        { opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', clearProps: 'all' },
+                        '-=0.35')
+                    .fromTo('.hero-image-wrapper',
+                        { opacity: 0, scale: 0.88, x: 50 },
+                        { opacity: 1, scale: 1, x: 0, duration: 0.9, ease: 'power3.out', clearProps: 'all' },
+                        '-=0.5')
+                    .fromTo('.floating-badge',
+                        { opacity: 0, scale: 0.6 },
+                        { opacity: 1, scale: 1, duration: 0.5, stagger: 0.15, ease: 'back.out(1.6)', clearProps: 'all' },
+                        '-=0.5');
             };
 
             if (document.readyState === 'complete') {
@@ -602,8 +593,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         } else {
             // No preloader pages entrance (like subpages)
-            gsap.from('.header', { y: -80, opacity: 0, duration: 0.7, ease: 'power3.out' });
-            gsap.from('.page-header', { opacity: 0, y: 30, duration: 0.6, ease: 'power2.out' }, '-=0.3');
+            gsap.fromTo('.header', { y: -80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', clearProps: 'all' });
+            gsap.fromTo('.page-header', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, '-=0.3');
         }
 
 
@@ -653,18 +644,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).join('');
 
                 const chars = title.querySelectorAll('.split-char');
-                gsap.to(chars, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.65,
-                    stagger: 0.08,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: title,
-                        start: 'top 90%',
-                        toggleActions: 'play none none none'
-                    }
-                });
+
+                // Check if element is already visible in viewport (e.g. hero area near top)
+                const rect = title.getBoundingClientRect();
+                const isAlreadyVisible = rect.top < window.innerHeight * 0.95;
+
+                if (isAlreadyVisible) {
+                    // Animate immediately without ScrollTrigger
+                    gsap.to(chars, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.65,
+                        stagger: 0.08,
+                        ease: 'power3.out',
+                        delay: 1.2 // slight delay to let hero entrance complete first
+                    });
+                } else {
+                    gsap.to(chars, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.65,
+                        stagger: 0.08,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: title,
+                            start: 'top 90%',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                }
             }
         });
     } else {

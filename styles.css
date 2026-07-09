@@ -17,23 +17,25 @@
     --text-light: #ffffff;
     --text-light-muted: #94a3b8;
     --border-color: #e2e8f0;
-    
+
     /* Box Shadows */
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
     --shadow-md: 0 10px 25px -5px rgba(15, 32, 66, 0.08), 0 8px 10px -6px rgba(15, 32, 66, 0.04);
     --shadow-lg: 0 20px 35px -8px rgba(15, 32, 66, 0.15), 0 12px 18px -8px rgba(15, 32, 66, 0.06);
-    
+
     /* Border Radii */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 32px;
-    
+
     /* Animation Transitions */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Global Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -52,7 +54,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary);
     font-weight: 700;
@@ -286,7 +291,8 @@ img {
     padding: 6px 0;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--secondary);
 }
 
@@ -301,7 +307,8 @@ img {
     transition: var(--transition);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -425,6 +432,7 @@ img {
     font-size: 0.9rem;
     color: var(--primary);
     animation: float 4s ease-in-out infinite;
+    z-index: 15;
 }
 
 .floating-badge i {
@@ -439,15 +447,18 @@ img {
 }
 
 .badge-2 {
-    bottom: 50px;
+    bottom: 80px;
     right: -30px;
     animation-delay: 2s;
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -1099,7 +1110,8 @@ img {
     letter-spacing: 0.5px;
 }
 
-.c-text p, .c-text a {
+.c-text p,
+.c-text a {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--primary);
@@ -1162,8 +1174,8 @@ img {
     color: var(--accent);
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1187,8 +1199,8 @@ img {
     color: var(--text-light);
 }
 
-.form-group input:focus, 
-.form-group select:focus, 
+.form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--secondary);
     background-color: rgba(255, 255, 255, 0.08);
@@ -1435,7 +1447,8 @@ img {
     gap: 30px;
 }
 
-.timing-col p, .address-col p {
+.timing-col p,
+.address-col p {
     color: #ffffff;
     font-size: 0.95rem;
     margin-top: 8px;
@@ -1697,23 +1710,27 @@ img {
     html {
         font-size: 15px;
     }
-    
+
     .hero-container,
     .about-container,
     .consultation-container,
     .why-container {
         gap: 36px;
     }
-    
+
     .stats-card-grid {
         gap: 20px;
     }
-    
-    .services-grid, .products-grid, .blogs-grid, .blogs-grid-main, .features-custom-grid {
+
+    .services-grid,
+    .products-grid,
+    .blogs-grid,
+    .blogs-grid-main,
+    .features-custom-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -1724,27 +1741,27 @@ img {
     .py-section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 1.85rem;
     }
-    
+
     .page-header-title {
         font-size: 2rem;
     }
-    
+
     .top-bar {
         display: none;
     }
-    
+
     .header {
         top: 0;
     }
-    
+
     .mobile-toggle {
         display: block;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 75px;
@@ -1760,92 +1777,92 @@ img {
         border-top: 1px solid var(--border-color);
         box-shadow: var(--shadow-md);
     }
-    
+
     .nav-menu.open {
         left: 0;
     }
-    
+
     .nav-link {
         font-size: 1.15rem;
     }
-    
+
     .btn-nav {
         display: none;
     }
-    
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
         padding-top: 20px;
     }
-    
+
     .hero-content {
         max-width: 100%;
         order: 1;
     }
-    
+
     .hero-title {
         font-size: 2.4rem;
     }
-    
+
     .hero-desc {
         font-size: 1.05rem;
     }
-    
+
     .hero-actions {
         justify-content: center;
     }
-    
+
     .hero-image-container {
         order: 2;
         max-width: 320px;
         margin: 0 auto;
     }
-    
+
     .badge-1 {
         left: -20px;
     }
-    
+
     .badge-2 {
         right: -10px;
     }
-    
+
     .stats-section {
         margin-top: 40px;
     }
-    
+
     .stats-card-grid {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px;
     }
-    
+
     .about-container,
     .why-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .about-image-container {
         max-width: 400px;
         margin: 0 auto;
     }
-    
+
     .consultation-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .footer-timing-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .footer-bottom-container {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    
+
     .features-custom-grid {
         grid-template-columns: 1fr;
     }
@@ -1855,48 +1872,51 @@ img {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .page-header-title {
         font-size: 1.75rem;
     }
-    
+
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .stats-card-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
-    .services-grid, .products-grid, .blogs-grid, .blogs-grid-main {
+
+    .services-grid,
+    .products-grid,
+    .blogs-grid,
+    .blogs-grid-main {
         grid-template-columns: 1fr;
     }
-    
+
     .appointment-form {
         padding: 24px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .video-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .experience-badge {
         width: 110px;
         padding: 10px;
         left: -10px;
         bottom: -10px;
     }
-    
+
     .exp-years {
         font-size: 1.6rem;
     }
-    
+
     .care-features-grid {
         grid-template-columns: 1fr;
     }
@@ -1948,7 +1968,8 @@ img {
     opacity: 0.8;
 }
 
-.css-medical-cross::before, .css-medical-cross::after {
+.css-medical-cross::before,
+.css-medical-cross::after {
     content: '';
     position: absolute;
     background-color: var(--cross-color, var(--secondary));
@@ -1974,6 +1995,7 @@ img {
     0% {
         transform: translateY(0) rotate(0deg);
     }
+
     100% {
         transform: translateY(-25px) rotate(15deg);
     }
@@ -1983,6 +2005,7 @@ img {
     0% {
         transform: translateX(0) translateY(0) rotate(0deg);
     }
+
     100% {
         transform: translateX(20px) translateY(-10px) rotate(-10deg);
     }
@@ -1993,6 +2016,7 @@ img {
         transform: scale(0.95);
         opacity: 0.08;
     }
+
     100% {
         transform: scale(1.1);
         opacity: 0.18;
@@ -2220,6 +2244,7 @@ img {
         opacity: 0.45;
         transform: scale(0.97);
     }
+
     100% {
         opacity: 1;
         transform: scale(1.02);
@@ -2269,20 +2294,25 @@ body.gsap-active .vm-card {
     pointer-events: none;
     opacity: 0.55;
 }
+
 .side-particle.icon-primary {
     color: var(--primary);
 }
+
 .side-particle.icon-secondary {
     color: var(--secondary);
 }
+
 .side-particle.side-bubble {
     width: 8px;
     height: 8px;
     border-radius: 50%;
 }
+
 .side-particle.bubble-primary {
     background-color: var(--primary);
 }
+
 .side-particle.bubble-secondary {
     background-color: var(--secondary);
 }
@@ -2323,6 +2353,7 @@ body.gsap-active .vm-card {
     0% {
         stroke-dashoffset: 1000;
     }
+
     100% {
         stroke-dashoffset: 0;
     }
@@ -2352,10 +2383,13 @@ body.gsap-active .vm-card {
 }
 
 @keyframes wavePulseHorizontal {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scaleY(0.7) scaleX(0.96) translateY(2px);
         opacity: 0.6;
     }
+
     50% {
         transform: scaleY(1.3) scaleX(1.04) translateY(-2px);
         opacity: 1;
@@ -2473,7 +2507,363 @@ body.gsap-active .vm-card {
     color: var(--text-muted);
 }
 
+/* Inline Video Cards Custom Styles */
+.video-card-item.inline-player {
+    position: relative;
+    cursor: default !important;
+}
 
+.video-player-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000000;
+    overflow: hidden;
+}
 
+.video-player-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: auto;
+}
 
+/* Custom Video Controls overlay inside video-player-container */
+.video-controls-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 32, 66, 0.9) 100%);
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    opacity: 1;
+    transition: var(--transition);
+}
 
+.video-ctrl-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.video-ctrl-btn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.video-ctrl-btn.mute-btn:hover {
+    background-color: var(--primary);
+}
+
+.patient-title {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   VIDEO TESTIMONIALS SECTION
+   ========================================== */
+.video-testimonials-section {
+    padding: 80px 0 90px;
+    background: linear-gradient(160deg, var(--bg-light) 0%, #eef1f8 50%, var(--secondary-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(85,104,166,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ==========================================
+   MASTER-DETAIL VIDEO LAYOUT
+   ========================================== */
+
+/* Master Player */
+.vt-master-container {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.vt-master-video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+}
+
+.vt-master-video-wrap video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vt-master-info {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.vt-master-title {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.vt-master-tag {
+    font-size: 0.85rem;
+}
+
+/* Thumbnails Row (6 videos) */
+.vt-thumbnails-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* Card */
+.vt-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Thumbnail wrapper — 16:9 aspect ratio */
+.vt-thumb-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.vt-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    display: block;
+}
+
+.vt-card:hover .vt-thumb {
+    transform: scale(1.04);
+    opacity: 0.85;
+}
+
+/* YouTube-style play button */
+.vt-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 68px;
+    height: 48px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    z-index: 2;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
+}
+
+.vt-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6));
+}
+
+.vt-play-icon-bg {
+    fill: #ff0000;
+    transition: fill 0.2s ease;
+}
+
+.vt-play-btn:hover .vt-play-icon-bg {
+    fill: #cc0000;
+}
+
+/* Auto-play badge on video 1 */
+.vt-autoplay-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 3;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(85,104,166,0.5); }
+    50%       { box-shadow: 0 0 0 6px rgba(85,104,166,0); }
+}
+
+/* Embedded iframe (replaces thumbnail on click) */
+.vt-thumb-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 5;
+}
+
+/* Card info area */
+.vt-info {
+    padding: 14px 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.vt-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.vt-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    background: var(--secondary-light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Active Thumbnail State */
+.vt-card.active-thumb {
+    box-shadow: 0 0 0 3px var(--primary);
+    transform: translateY(-4px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.vt-play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.vt-card:hover .vt-play-overlay {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .vt-thumbnails-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .vt-master-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .vt-thumbnails-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video-testimonials-section {
+        padding: 56px 0 64px;
+    }
+}
+
+/* ==========================================
+   ANIMATION SAFETY NET
+   Ensures no element is permanently hidden
+   if GSAP fails or clearProps is needed.
+   GSAP inline styles always win over these,
+   so these only apply after clearProps or
+   when GSAP is not loaded.
+   ========================================== */
+
+/* Section subtitle (hero tag like "Hearing Aid") always visible */
+.section-subtitle {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Split-char smooth transition fallback */
+.split-char {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Reveal-on-scroll fallback if GSAP not loaded */
+.reveal-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Ensure floating badges never disappear permanently */
+.floating-badge {
+    opacity: 1;
+    visibility: visible;
+}
+
