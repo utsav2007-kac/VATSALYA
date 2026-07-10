@@ -54,6 +54,14 @@
             </nav>
 
             <div class="nav-actions">
+                <div class="nav-lang-toggle notranslate">
+                    <label class="lang-switch">
+                        <input type="checkbox" class="globalLangToggle">
+                        <span class="lang-slider"></span>
+                        <span class="lang-text en-text">EN</span>
+                        <span class="lang-text gu-text">GU</span>
+                    </label>
+                </div>
                 <a href="contact.html" class="btn btn-primary btn-nav">Book Appointment</a>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
@@ -297,9 +305,19 @@
         </div>
     </div>
 
+    <!-- Google Translate Element (Hidden) -->
+    <div id="google_translate_element" style="display: none;"></div>
+
     <!-- GSAP for premium animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,gu', autoDisplay: false }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
