@@ -39,57 +39,8 @@
     </div>
   </div>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-container">
-      <div class="top-info">
-        <a href="mailto:vatsalya.since2003@gmail.com"><i class="fa-solid fa-envelope"></i>
-          vatsalya.since2003@gmail.com</a>
-        <a href="tel:+919638710002"><i class="fa-solid fa-phone"></i> +91 963 871 0002</a>
-        <a href="tel:+919898155882"><i class="fa-solid fa-phone"></i> +91 989 815 5882</a>
-      </div>
-      <div class="top-tagline">
-        <span>Before Visit Please, Take Prior Appointment</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo-area" id="logo">
-        <img src="images/media__1783340117858.png" alt="Vatsalya Logo" class="logo-img" />
-        <div class="logo-text">
-          <span class="logo-title">VATSALYA</span>
-          <span class="logo-subtitle">HEARING & SPEECH CLINIC</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="products.html" class="nav-link">Product</a>
-        <a href="blogs.html" class="nav-link">Blogs</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </nav>
-
-      <div class="nav-actions">
-        <div class="nav-lang-toggle notranslate">
-          <label class="lang-switch">
-            <input type="checkbox" class="globalLangToggle">
-            <span class="lang-slider"></span>
-            <span class="lang-text en-text">EN</span>
-            <span class="lang-text gu-text">GU</span>
-          </label>
-        </div>
-        <a href="contact.html" class="btn btn-primary btn-nav">Book Appointment</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
+  <!-- Standardized Header Component -->
+  <site-header></site-header>
 
   <!-- Main Content Area -->
   <main>
@@ -139,7 +90,7 @@
 
       <div class="container hero-container">
         <div class="hero-content">
-          <span class="section-subtitle">Hearing Aid</span>
+          <!-- <span class="section-subtitle">Hearing Aid</span> -->
           <h1 class="hero-title">
             Don't ignore <span class="highlight">Hearing Loss</span>, Treat
             Before It's Too Late
@@ -149,20 +100,21 @@
             rehabilitation and clinical audiology services since 2003.
           </p>
           <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">Explore Services</a>
-            <a href="#contact" class="btn btn-secondary">Book Consultation <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="services.html" class="btn btn-primary">Explore Services</a>
+            <a href="contact.html" class="btn btn-secondary">Book Consultation <i
+                class="fa-solid fa-chevron-right"></i></a>
           </div>
         </div>
 
         <div class="hero-image-container">
           <div class="hero-image-wrapper">
             <!-- References generated hero image -->
-            <img src="images/hero_hearing_clinic_1783338378475.png?v=1.1"
+            <img src="images/hero_indian_audiologist_1784635949365.png"
               alt="Grandfather and grandson sharing a joyful hearing moment" class="hero-img" />
-            <div class="floating-badge badge-1">
+            <!-- <div class="floating-badge badge-1">
               <i class="fa-solid fa-circle-check"></i>
               <span>Trusted Care</span>
-            </div>
+            </div> -->
             <div class="floating-badge badge-2">
               <i class="fa-solid fa-microchip"></i>
               <span>Latest Technology</span>
@@ -325,7 +277,7 @@
         <div class="about-image-container">
           <div class="about-image-wrapper">
             <!-- References generated doctors image -->
-            <img src="images/doctors_clinic_1783338394363.png"
+            <img src="images/indian_doctor_consultation_1784635970175.png"
               alt="Clinical specialists at Vatsalya Hearing & Speech Clinic" class="about-img" loading="lazy" />
             <div class="experience-badge">
               <span class="exp-years">20+</span>
@@ -352,8 +304,8 @@
           <!-- Service 1 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_cochlear_1783339646919.png" alt="Cochlear Implant Rehab" class="service-card-img"
-                loading="lazy" />
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="Cochlear Implant Rehab"
+                class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Cochlear Implant Rehab</h3>
             <p class="service-desc">
@@ -366,7 +318,7 @@
           <!-- Service 2 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_audiology_1783339614793.png" alt="Audiological Diagnosis"
+              <img src="images/hero_indian_audiologist_1784635949365.png" alt="Audiological Diagnosis"
                 class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Audiological Diagnosis</h3>
@@ -380,7 +332,7 @@
           <!-- Service 3 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_electrophysiology_1783344065086.png" alt="Electrophysiological Testing"
+              <img src="images/indian_doctor_consultation_1784635970175.png" alt="Electrophysiological Testing"
                 class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Electrophysiological Testing</h3>
@@ -394,7 +346,7 @@
           <!-- Service 4 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_speech_therapy_1783339629417.png" alt="Voice Therapy & Treatment"
+              <img src="images/indian_speech_therapy_1784635980765.png" alt="Voice Therapy & Treatment"
                 class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Voice Therapy & Treatment</h3>
@@ -408,7 +360,7 @@
           <!-- Service 5 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_pediatric_audiology_1783344079526.png" alt="Pediatric Audiology"
+              <img src="images/pediatric_indian_therapy_1784635960780.png" alt="Pediatric Audiology"
                 class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Pediatric Audiology</h3>
@@ -421,7 +373,7 @@
           <!-- Service 6 -->
           <div class="service-card reveal-on-scroll">
             <div class="service-image-box">
-              <img src="images/service_hearing_aid_trial_1783344092434.png" alt="Hearing Aid Trial & Fitting"
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="Hearing Aid Trial & Fitting"
                 class="service-card-img" loading="lazy" />
             </div>
             <h3 class="service-title">Hearing Aid Trial & Fitting</h3>
@@ -452,8 +404,8 @@
           <!-- Product 1 -->
           <div class="product-card reveal-on-scroll">
             <div class="product-img-wrapper">
-              <img src="images/hearing_aid_tech_1783338407677.png" alt="AI Genesis Hearing Aid" class="product-img"
-                loading="lazy" />
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="AI Genesis Hearing Aid"
+                class="product-img" loading="lazy" />
               <span class="product-badge">Flagship</span>
             </div>
             <div class="product-info">
@@ -468,7 +420,7 @@
           <!-- Product 2 -->
           <div class="product-card reveal-on-scroll">
             <div class="product-img-wrapper">
-              <img src="images/hearing_aid_tech_1783338407677.png" alt="Rechargeable RIC Hearing Aid"
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="Rechargeable RIC Hearing Aid"
                 class="product-img" loading="lazy" />
               <span class="product-badge">Rechargeable</span>
             </div>
@@ -484,8 +436,8 @@
           <!-- Product 3 -->
           <div class="product-card reveal-on-scroll">
             <div class="product-img-wrapper">
-              <img src="images/hearing_aid_tech_1783338407677.png" alt="Invisible ITC Hearing Aid" class="product-img"
-                loading="lazy" />
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="Invisible ITC Hearing Aid"
+                class="product-img" loading="lazy" />
               <span class="product-badge">Invisible</span>
             </div>
             <div class="product-info">
@@ -666,7 +618,7 @@
           <!-- Blog 1 -->
           <div class="blog-card reveal-on-scroll">
             <div class="blog-image-wrapper">
-              <img src="images/blog_hearing_loss_treatment_1783344119754.png" alt="Understanding Hearing Loss"
+              <img src="images/indian_doctor_consultation_1784635970175.png" alt="Understanding Hearing Loss"
                 class="blog-img" loading="lazy" />
             </div>
             <div class="blog-content">
@@ -685,7 +637,7 @@
           <!-- Blog 2 -->
           <div class="blog-card reveal-on-scroll">
             <div class="blog-image-wrapper">
-              <img src="images/blog_ai_genesis_aid_1783344134701.png" alt="AI in Hearing Aids" class="blog-img"
+              <img src="images/indian_hearing_aid_close_1784635992062.png" alt="AI in Hearing Aids" class="blog-img"
                 loading="lazy" />
             </div>
             <div class="blog-content">
@@ -851,119 +803,8 @@
   </main>
 
 
-  <!-- Footer Area -->
-  <footer id="footer" class="footer">
-    <div class="container footer-grid">
-      <!-- Col 1: Clinic Bio -->
-      <div class="footer-col footer-bio">
-        <a href="#" class="logo-area logo-footer">
-          <img src="images/media__1783340117858.png" alt="Vatsalya Logo" class="logo-img" />
-          <div class="logo-text">
-            <span class="logo-title">VATSALYA</span>
-            <span class="logo-subtitle">HEARING & SPEECH CLINIC</span>
-          </div>
-        </a>
-        <p class="footer-bio-text">
-          Where sound becomes clarity, and speech finds its voice – Vatsalya
-          Hearing & Speech Clinic.
-        </p>
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
-              class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
-              class="fa-brands fa-instagram"></i></a>
-          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-
-      <!-- Col 2: Branches -->
-      <div class="footer-col">
-        <h3 class="footer-title">Branches</h3>
-        <ul class="footer-links-list">
-          <li><i class="fa-solid fa-location-dot"></i> Rajkot (Head HQ)</li>
-          <li><i class="fa-solid fa-location-dot"></i> Jamnagar</li>
-          <li><i class="fa-solid fa-location-dot"></i> Junagadh</li>
-          <li><i class="fa-solid fa-location-dot"></i> Morbi</li>
-          <li><i class="fa-solid fa-location-dot"></i> Upaleta</li>
-          <li><i class="fa-solid fa-location-dot"></i> Jamkhambhaliya</li>
-          <li><i class="fa-solid fa-location-dot"></i> Porbandar</li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Contact Details -->
-      <div class="footer-col">
-        <h3 class="footer-title">Contact Details</h3>
-        <ul class="footer-links-list">
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+917490977077">+91 749 097 7077</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+919638710002">+91 963 871 0002</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+919898155882">+91 989 815 5882</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:vatsalya.since2003@gmail.com">vatsalya.since2003@gmail.com</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Video Reviews -->
-      <div class="footer-col">
-        <h3 class="footer-title">Satisfied Patient Videos</h3>
-        <div class="video-grid">
-          <div class="video-thumbnail-wrapper" onclick="alert('Playing patient testimonial video...')">
-            <img src="images/hero_hearing_clinic_1783338378475.png" alt="Patient Video 1" class="video-thumb" />
-            <div class="play-btn-overlay">
-              <i class="fa-solid fa-circle-play"></i>
-            </div>
-          </div>
-          <div class="video-thumbnail-wrapper" onclick="alert('Playing patient testimonial video...')">
-            <img src="images/doctors_clinic_1783338394363.png" alt="Patient Video 2" class="video-thumb" />
-            <div class="play-btn-overlay">
-              <i class="fa-solid fa-circle-play"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-timing-bar">
-      <div class="container footer-timing-grid">
-        <div class="timing-col">
-          <h4 class="timing-title">
-            <i class="fa-solid fa-clock"></i> Visiting Hours
-          </h4>
-          <p>Mon - Sat: 10:00 am - 7:00 pm</p>
-        </div>
-        <div class="address-col">
-          <h4 class="timing-title">
-            <i class="fa-solid fa-map-location-dot"></i> Rajkot HQ Address
-          </h4>
-          <p>
-            104, First Floor, Twin Star Complex, Mahapujadham Chowk, Near Nana
-            Mava Circle, 150 Feet Ring Road, Rajkot, Gujarat-360001.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-container">
-        <p>
-          Copyright &copy; 2024 Vatsalya Hearing and Speech Clinic- All Rights
-          Reserved.
-        </p>
-        <p>- Before Visit Please, Take Prior Appointment</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Standardized Footer Component -->
+  <site-footer></site-footer>
 
   <!-- Booking Confirmation Modal -->
   <div class="modal-overlay" id="confirmationModal">
@@ -985,36 +826,11 @@
     </div>
   </div>
 
-  <!-- Language Selection Modal -->
-  <div class="modal-overlay" id="languageModal">
-    <div class="modal-card language-card">
-      <div class="lang-icon">
-        <i class="fa-solid fa-language"></i>
-      </div>
-      <h3 class="modal-title">Select Your Language</h3>
-      <p class="modal-desc">Please choose your preferred language to continue browsing Vatsalya Clinic.</p>
-      
-      <div class="lang-options">
-        <button class="btn btn-secondary lang-btn" data-lang="en">English</button>
-        <button class="btn btn-primary lang-btn" data-lang="gu">ગુજરાતી</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Google Translate Element (Hidden) -->
-  <div id="google_translate_element" style="display: none;"></div>
-
   <!-- GSAP for premium animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Google Translate Script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,gu', autoDisplay: false }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- Custom Script -->
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 

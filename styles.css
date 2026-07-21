@@ -17,6 +17,8 @@
     --text-light: #ffffff;
     --text-light-muted: #94a3b8;
     --border-color: #e2e8f0;
+    --wp-green: #55a65a;
+    --wp-green-dark: #468851;
 
     /* Box Shadows */
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
@@ -115,6 +117,18 @@ img {
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(81, 85, 166, 0.4);
+}
+
+.btn-wp-green {
+    background-color: var(--wp-green);
+    color: var(--text-light);
+    box-shadow: 0 4px 12px rgba(81, 85, 166, 0.25);
+}
+
+.btn-wp-green:hover {
+    background-color: var(--wp-green-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(81, 85, 166, 0.4);
 }
@@ -238,7 +252,7 @@ img {
 }
 
 .logo-img {
-    height: 44px;
+    height: 77px;
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
@@ -319,9 +333,12 @@ img {
 }
 
 .btn-nav {
+
     padding: 10px 20px;
     font-size: 0.9rem;
 }
+
+
 
 .mobile-toggle {
     display: none;
@@ -329,6 +346,15 @@ img {
     border: none;
     font-size: 1.5rem;
     color: var(--primary);
+    cursor: pointer;
+}
+
+.mobile-toggle-green {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--wp-green);
     cursor: pointer;
 }
 
@@ -377,7 +403,7 @@ img {
 }
 
 .hero-title {
-    font-size: 3.25rem;
+    font-size: 2.74rem;
     line-height: 1.15;
     margin-bottom: 24px;
 }
@@ -1790,6 +1816,21 @@ img {
         display: none;
     }
 
+    .mobile-nav-actions {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        padding: 0 24px;
+        margin-top: 10px;
+    }
+
+    .mobile-nav-actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2596,7 +2637,7 @@ body.gsap-active .vm-card {
     transform: translateX(-50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(85,104,166,0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(85, 104, 166, 0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -2617,7 +2658,8 @@ body.gsap-active .vm-card {
 .vt-master-video-wrap {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     background: #000;
 }
 
@@ -2635,7 +2677,7 @@ body.gsap-active .vm-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .vt-master-title {
@@ -2709,12 +2751,12 @@ body.gsap-active .vm-card {
     height: 48px;
     transition: transform 0.2s ease, filter 0.2s ease;
     z-index: 2;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
 }
 
 .vt-play-btn:hover {
     transform: translate(-50%, -50%) scale(1.12);
-    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6));
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
 }
 
 .vt-play-icon-bg {
@@ -2744,8 +2786,15 @@ body.gsap-active .vm-card {
 }
 
 @keyframes badgePulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(85,104,166,0.5); }
-    50%       { box-shadow: 0 0 0 6px rgba(85,104,166,0); }
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(85, 104, 166, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(85, 104, 166, 0);
+    }
 }
 
 /* Embedded iframe (replaces thumbnail on click) */
@@ -2798,7 +2847,7 @@ body.gsap-active .vm-card {
 .vt-play-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2826,9 +2875,11 @@ body.gsap-active .vm-card {
         align-items: flex-start;
         gap: 8px;
     }
+
     .vt-thumbnails-row {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .video-testimonials-section {
         padding: 56px 0 64px;
     }
@@ -2866,206 +2917,3 @@ body.gsap-active .vm-card {
     opacity: 1;
     visibility: visible;
 }
-
-/* ==========================================
-   Language Selection Modal
-   ========================================== */
-.language-card {
-    max-width: 450px;
-    padding: 40px 30px;
-    text-align: center;
-}
-
-.lang-icon {
-    font-size: 3.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    animation: floatParticleY 3s ease-in-out infinite alternate;
-}
-
-.language-card .modal-title {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-}
-
-.language-card .modal-desc {
-    font-size: 1rem;
-    color: var(--text-light);
-    margin-bottom: 30px;
-}
-
-.lang-options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.lang-options .lang-btn {
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 14px 28px;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-@media (min-width: 480px) {
-    .lang-options {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .lang-options .lang-btn {
-        width: auto;
-        min-width: 160px;
-    }
-}
-
-/* Hide Google Translate Default UI Elements */
-body {
-    top: 0 !important;
-}
-
-.goog-te-banner-frame,
-.skiptranslate,
-#goog-gt-tt {
-    display: none !important;
-}
-
-.goog-tooltip {
-    display: none !important;
-}
-
-.goog-tooltip:hover {
-    display: none !important;
-}
-
-.goog-text-highlight {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* ==========================================
-   Navbar Language Toggle
-   ========================================== */
-.nav-lang-toggle {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-}
-
-.lang-switch {
-    position: relative;
-    display: inline-block;
-    width: 76px;
-    height: 32px;
-    border-radius: 4px; /* Slight rounding for a premium square look */
-    background-color: var(--primary); /* Always primary theme color */
-    overflow: hidden;
-}
-
-.lang-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.lang-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* The sliding highlight block */
-.lang-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 34px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s cubic-bezier(0.4, 0.0, 0.2, 1);
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.lang-text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.75rem;
-    font-weight: 700;
-    width: 34px;
-    text-align: center;
-    z-index: 2;
-    pointer-events: none;
-    transition: color 0.3s ease;
-}
-
-.en-text {
-    left: 3px;
-    color: var(--primary); /* Active text color when highlighted by white slider */
-}
-
-.gu-text {
-    right: 3px;
-    color: rgba(255, 255, 255, 0.8); /* Inactive text color on dark background */
-}
-
-.globalLangToggle:checked + .lang-slider:before {
-    transform: translateX(36px);
-}
-
-.globalLangToggle:checked ~ .en-text {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.globalLangToggle:checked ~ .gu-text {
-    color: var(--primary);
-}
-
-/* Mini Loader for Toggle Switch */
-.lang-slider:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 12px; /* Center of left block (3px + 17px - 8px) */
-    width: 16px;
-    height: 16px;
-    margin-top: -8px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    transition: left .4s cubic-bezier(0.4, 0.0, 0.2, 1);
-    z-index: 3;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.lang-switch.loading .lang-slider:after {
-    opacity: 1;
-    animation: switch-spin 0.6s linear infinite;
-}
-
-.globalLangToggle:checked + .lang-slider:after {
-    left: 48px; /* Center of right block (39px + 17px - 8px) */
-}
-
-@keyframes switch-spin {
-    to { transform: rotate(360deg); }
-}
-
-.lang-switch.loading .lang-text {
-    opacity: 0 !important;
-}
-
-@media (max-width: 900px) {
-    .nav-lang-toggle {
-        margin-right: 10px;
-    }
-}
-
