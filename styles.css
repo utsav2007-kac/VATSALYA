@@ -195,6 +195,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1350px;
 }
 
 .top-info {
@@ -243,6 +244,7 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 15px 24px;
+    max-width: 1350px;
 }
 
 .logo-area {
@@ -333,7 +335,7 @@ img {
 }
 
 .btn-nav {
-
+    
     padding: 10px 20px;
     font-size: 0.9rem;
 }
@@ -349,7 +351,7 @@ img {
     cursor: pointer;
 }
 
-.mobile-toggle-green {
+.mobile-toggle-green{
     display: none;
     background: transparent;
     border: none;
@@ -1731,6 +1733,11 @@ img {
     color: var(--text-muted);
 }
 
+/* Mobile Menu Buttons (Hidden on Desktop) */
+.mobile-nav-buttons {
+    display: none;
+}
+
 /* RESPONSIVE DESIGN (Media Queries) */
 @media (max-width: 1024px) {
     html {
@@ -1816,19 +1823,28 @@ img {
         display: none;
     }
 
-    .mobile-nav-actions {
-        display: flex !important;
+    .mobile-nav-buttons {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
         width: 100%;
         padding: 0 24px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
-
-    .mobile-nav-actions .btn {
-        width: 100%;
+    
+    .btn-nav-mobile {
         text-align: center;
+        padding: 12px;
+        width: 100%;
+        font-size: 1.1rem;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
         justify-content: center;
+        gap: 10px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
     }
 
     .hero-container {
@@ -2637,7 +2653,7 @@ body.gsap-active .vm-card {
     transform: translateX(-50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(85, 104, 166, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(85,104,166,0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -2658,8 +2674,7 @@ body.gsap-active .vm-card {
 .vt-master-video-wrap {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     background: #000;
 }
 
@@ -2677,7 +2692,7 @@ body.gsap-active .vm-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .vt-master-title {
@@ -2751,12 +2766,12 @@ body.gsap-active .vm-card {
     height: 48px;
     transition: transform 0.2s ease, filter 0.2s ease;
     z-index: 2;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
 }
 
 .vt-play-btn:hover {
     transform: translate(-50%, -50%) scale(1.12);
-    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6));
 }
 
 .vt-play-icon-bg {
@@ -2786,15 +2801,8 @@ body.gsap-active .vm-card {
 }
 
 @keyframes badgePulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(85, 104, 166, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 0 0 6px rgba(85, 104, 166, 0);
-    }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(85,104,166,0.5); }
+    50%       { box-shadow: 0 0 0 6px rgba(85,104,166,0); }
 }
 
 /* Embedded iframe (replaces thumbnail on click) */
@@ -2847,7 +2855,7 @@ body.gsap-active .vm-card {
 .vt-play-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2875,11 +2883,9 @@ body.gsap-active .vm-card {
         align-items: flex-start;
         gap: 8px;
     }
-
     .vt-thumbnails-row {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .video-testimonials-section {
         padding: 56px 0 64px;
     }
@@ -2916,4 +2922,143 @@ body.gsap-active .vm-card {
 .floating-badge {
     opacity: 1;
     visibility: visible;
+}
+
+/* ==========================================
+   Language Toggle Switch Styles
+   ========================================== */
+.nav-lang-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.lang-switch {
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 30px;
+    margin: 0;
+}
+
+.lang-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.lang-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    transition: 0.4s;
+    border-radius: 4px;
+    border: 1px solid var(--primary-dark);
+}
+
+.lang-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 30px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+input:checked + .lang-slider:before {
+    transform: translateX(34px);
+}
+
+.lang-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+    pointer-events: none;
+    transition: 0.4s color;
+}
+
+.en-text {
+    left: 8px;
+    color: var(--primary);
+}
+
+.gu-text {
+    right: 7px;
+    color: white;
+}
+
+input:checked ~ .en-text {
+    color: white;
+}
+
+input:checked ~ .gu-text {
+    color: var(--primary);
+}
+
+/* Loading Spinner CSS */
+.lang-slider:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -7px;
+    border: 2px solid transparent;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: lang-spin 0.8s linear infinite;
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: 0.4s left, 0.2s opacity;
+}
+
+input:checked + .lang-slider:after {
+    left: 50px;
+}
+
+@keyframes lang-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.lang-switch.loading .lang-slider:after {
+    opacity: 1;
+}
+
+.lang-switch.loading input:not(:checked) ~ .en-text,
+.lang-switch.loading input:checked ~ .gu-text {
+    opacity: 0 !important;
+}
+
+/* Hide Google Translate Banner and tooltips */
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+.goog-te-gadget-simple img,
+#goog-gt-tt,
+.goog-te-spinner-pos,
+.goog-text-highlight,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+body {
+    top: 0px !important; 
 }
