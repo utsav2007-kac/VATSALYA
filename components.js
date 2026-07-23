@@ -11,7 +11,7 @@ class SiteHeader extends HTMLElement {
             <a href="tel:+919898155882"><i class="fa-solid fa-phone"></i> +91 989 815 5882</a>
           </div>
           <div class="top-tagline">
-            <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;<span>Rajkot (Head HQ) | Jamnagar | Junagadh | Morbi | Upaleta | Jamkhambhaliya | Porbandar</span>
+            <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;<span>Rajkot (Head HQ) | Jamnagar | Junagadh | Upaleta | Porbandar</span>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@ class SiteHeader extends HTMLElement {
             <img src="images/media__1783340117858.png" alt="Vatsalya Logo" class="logo-img" />
             <div class="logo-text">
               <span class="logo-title">VATSALYA</span>
-              <span class="logo-subtitle">HEARING & SPEECH CLINIC</span>
+              <span class="logo-subtitle">SPEECH & HEARING CLINIC</span>
             </div>
           </a>
 
@@ -182,12 +182,12 @@ class SiteFooter extends HTMLElement {
               <img src="images/media__1783340117858.png" alt="Vatsalya Logo" class="logo-img" />
               <div class="logo-text">
                 <span class="logo-title">VATSALYA</span>
-                <span class="logo-subtitle">HEARING & SPEECH CLINIC</span>
+                <span class="logo-subtitle">SPEECH & HEARING CLINIC</span>
               </div>
             </a>
             <p class="footer-bio-text">
               Where sound becomes clarity, and speech finds its voice – Vatsalya
-              Hearing & Speech Clinic.
+              Speech & Hearing Clinic.
             </p>
             <div class="social-links">
               <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
@@ -200,15 +200,13 @@ class SiteFooter extends HTMLElement {
           </div>
 
           <!-- Col 2: Branches -->
-          <div class="footer-col">
+          <div class="footer-col notranslate">
             <h3 class="footer-title">Branches</h3>
             <ul class="footer-links-list">
               <li><i class="fa-solid fa-location-dot"></i> Rajkot (Head HQ)</li>
               <li><i class="fa-solid fa-location-dot"></i> Jamnagar</li>
               <li><i class="fa-solid fa-location-dot"></i> Junagadh</li>
-              <li><i class="fa-solid fa-location-dot"></i> Morbi</li>
               <li><i class="fa-solid fa-location-dot"></i> Upaleta</li>
-              <li><i class="fa-solid fa-location-dot"></i> Jamkhambhaliya</li>
               <li><i class="fa-solid fa-location-dot"></i> Porbandar</li>
             </ul>
           </div>
@@ -219,7 +217,7 @@ class SiteFooter extends HTMLElement {
             <ul class="footer-links-list">
               <li>
                 <i class="fa-solid fa-phone"></i>
-                <a href="tel:+917490977077">+91 749 097 7077</a>
+                <a href="tel:+917490977070">+91 74909 77070</a>
               </li>
               <li>
                 <i class="fa-solid fa-phone"></i>
@@ -231,7 +229,7 @@ class SiteFooter extends HTMLElement {
               </li>
               <li>
                 <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:vatsalya.since2003@gmail.com">vatsalya.since2003@gmail.com</a>
+                <a href="mailto:vatsalya.clinic2003@gmail.com">vatsalya.clinic2003@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -269,8 +267,9 @@ class SiteFooter extends HTMLElement {
                 <i class="fa-solid fa-map-location-dot"></i> Rajkot HQ Address
               </h4>
               <p>
-                104, First Floor, Twin Star Complex, Mahapujadham Chowk, Near Nana
-                Mava Circle, 150 Feet Ring Road, Rajkot, Gujarat-360001.
+                104, Twin Star Building, South Block, Mahapujadham chowk, Near 
+                Mirracle Doctor House, Near Nanamava Circle, 150 feet Ring Road, 
+                Rajkot - 360005
               </p>
             </div>
           </div>
@@ -279,7 +278,7 @@ class SiteFooter extends HTMLElement {
         <div class="footer-bottom">
           <div class="container footer-bottom-container">
             <p>
-              Copyright &copy; 2024 Vatsalya Hearing and Speech Clinic- All Rights
+              Copyright &copy; 2024 Vatsalya Speech and Hearing Clinic- All Rights
               Reserved.
             </p>
             <p>- Before Visit Please, Take Prior Appointment</p>
