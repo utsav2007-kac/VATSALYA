@@ -7,6 +7,7 @@ class SiteHeader extends HTMLElement {
           <div class="top-info">
             <!-- <a href="mailto:vatsalya.since2003@gmail.com"><i class="fa-solid fa-envelope"></i>
               vatsalya.since2003@gmail.com</a> -->
+            <a href="tel:+917490977070"><i class="fa-solid fa-phone"></i>+917490977070 </a>
             <a href="tel:+919638710002"><i class="fa-solid fa-phone"></i> +91 963 871 0002</a>
             <a href="tel:+919898155882"><i class="fa-solid fa-phone"></i> +91 989 815 5882</a>
           </div>
@@ -58,8 +59,8 @@ class SiteHeader extends HTMLElement {
                 <span class="lang-text gu-text">GU</span>
               </label>
             </div>
-            <a href="tel:+919638710002" class="btn btn-primary btn-nav"><i class="fa-solid fa-phone"></i> Call now</a>
-            <a href="https://wa.me/+919898155882" class="btn btn-primary btn-nav" style="background-color: #25D366; border-color: #25D366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp now</a>
+            <a href="tel:+917490977070" class="btn btn-primary btn-nav"><i class="fa-solid fa-phone"></i> Call now</a>
+            <a href="https://wa.me/+917490977070" class="btn btn-primary btn-nav" style="background-color: #25D366; border-color: #25D366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp now</a>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
               <i class="fa-solid fa-bars"></i>
             </button>
